@@ -1,34 +1,30 @@
-//explicit type
-// string variable but i dont want to initialize it at the moment want to declare only
-let name1:string;
-name1="mark"
-console.log(name1)
-//array
-//the array should be string array
-let cars:string[]=[]
-cars.push("mira","vigo")
-console.log(cars)
-//but if i want a mixed array? i will use union or any
-//union
-let trees:(string|number|boolean)[]=[]
-trees.push("pine","34",true)
-console.log(trees)
-//any
-let flowers:any[]=[]
-flowers.push("lavender",23,false)
-console.log(flowers)
+//fuction type
 
-//we can use union with normal type too 
-let uid:string|boolean
-// objects
-let bus:object
-bus={
-    model:3004,
-    automatic:false
+let hope:Function
+//defailt val
+// hope=(a:number,b:number,c:number=4)=>{
+//     console.log(a,b,c)
+// }
+//optional
+hope=(a:number,b:number,c?:number)=>{
+    console.log(a,b,c)
 }
-//if i use any with normak type it then become reverse typescript i.e js which is 
-//not beneficial 
-let pet:any
-pet="cat"
-pet=45
-console.log(pet)
+// let hopecall=hope(1,2)  3rd param undefined
+let hopecall=hope(1,2)
+
+let fun=(a,b):number=>{
+    return a+b
+}
+let funcall=fun(1,2)
+console.log(funcall)
+
+//ALIASES
+let fun1=(a:number|string|boolean)=>{
+    console.log("its not that easy")
+
+}
+//instead of writing this we can write this in simpoler way 
+type sn=number|string|boolean
+let fun2=(a:sn)=>{
+    console.log("this is much easier")
+}

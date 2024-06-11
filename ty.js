@@ -1,33 +1,17 @@
-//explicit type
-// string variable but i dont want to initialize it at the moment want to declare only
-var name1;
-name1 = "mark";
-console.log(name1);
-//array
-//the array should be string array
-var cars = [];
-cars.push("mira", "vigo");
-console.log(cars);
-//but if i want a mixed array? i will use union or any
-//union
-var trees = [];
-trees.push("pine", "34", true);
-console.log(trees);
-//any
-var flowers = [];
-flowers.push("lavender", 23, false);
-console.log(flowers);
-//we can use union with normal type too 
-var uid;
-// objects
-var bus;
-bus = {
-    model: 3004,
-    automatic: false
+//fuction type
+var hope;
+//defailt val
+// hope=(a:number,b:number,c:number=4)=>{
+//     console.log(a,b,c)
+// }
+//optional
+hope = function (a, b, c) {
+    console.log(a, b, c);
 };
-//if i use any with normak type it then become reverse typescript i.e js which is 
-//not beneficial 
-var pet;
-pet = "cat";
-pet = 45;
-console.log(pet);
+// let hopecall=hope(1,2)  3rd param undefined
+var hopecall = hope(1, 2);
+var fun = function (a, b) {
+    return a + b;
+};
+var funcall = fun(1, 2);
+console.log(funcall);
