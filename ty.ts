@@ -1,30 +1,30 @@
-//fuction type
+//function signature
 
-let hope:Function
-//defailt val
-// hope=(a:number,b:number,c:number=4)=>{
-//     console.log(a,b,c)
-// }
-//optional
-hope=(a:number,b:number,c?:number)=>{
-    console.log(a,b,c)
+//eg1
+let func1:(a:string,b:number)=>void
+//function that takes string and number and returns nothing
+func1=(name,age)=>{
+    console.log("Her name is ",name,"and age is ",age)
 }
-// let hopecall=hope(1,2)  3rd param undefined
-let hopecall=hope(1,2)
+func1("mak",23)
 
-let fun=(a,b):number=>{
-    return a+b
+//eg2
+let func2:(a:number,b:number,c:string)=>number
+func2=(no1,no2,st)=>{
+    if(st==="true"){
+        return no1;
+    }
+    else{
+        return no2;
+    }
 }
-let funcall=fun(1,2)
-console.log(funcall)
+console.log(func2(1,2,"true"))
 
-//ALIASES
-let fun1=(a:number|string|boolean)=>{
-    console.log("its not that easy")
+//eg3
+let func3:(obj:{name:string,age:number})=>number
 
+func3=(person:{name,age})=>{
+    return person.age
 }
-//instead of writing this we can write this in simpoler way 
-type sn=number|string|boolean
-let fun2=(a:sn)=>{
-    console.log("this is much easier")
-}
+console.log(func3({name:"mark",age:34}))
+
