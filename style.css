@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+.maindiv{
+    display: flex;
+    
+    justify-content: center;
+    
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    gap:5px
+}
