@@ -1,3 +1,30 @@
+//classes
+
+class invoice{
+    client:string;
+    details:string;
+    ammount:number;
+
+    constructor (c:string,d:string,a:number){
+        this.client=c;
+        this.details=d;
+        this.ammount=a;
+
+    }
+    format(){
+        return `${this.client} ownes ${this.ammount} for ${this.details}`
+    }
+}
+
+let invoice1=new invoice("mak","web",23)
+console.log(invoice1)
+
+
+
+
+
+
+
 //DOM WITH TS
 let anchor=document.querySelector("a")!;
 //console.log(anchor.href);//bc ts dont know about html thing that something called anchor exists
