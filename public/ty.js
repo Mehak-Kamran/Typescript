@@ -11,7 +11,13 @@ class invoice {
     }
 }
 let invoice1 = new invoice("mak", "web", 23);
-console.log(invoice1);
+let invoice2 = new invoice("peter", "wordpress", 200);
+let invoices = [];
+invoices.push(invoice1);
+invoices.push(invoice2);
+invoices.forEach((inv) => {
+    console.log(inv.client, inv.details, inv.format());
+});
 //DOM WITH TS
 let anchor = document.querySelector("a");
 //console.log(anchor.href);//bc ts dont know about html thing that something called anchor exists
