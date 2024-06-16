@@ -16,12 +16,15 @@ class invoice{
     }
 }
 
-let invoice1=new invoice("mak","web",23)
-console.log(invoice1)
+let invoice1=new invoice("mak","web",23,)
+let invoice2=new invoice("peter","wordpress",200)
+let invoices:invoice[]=[]
+invoices.push(invoice1)
+invoices.push(invoice2)
+invoices.forEach((inv)=>{
+    console.log(inv.client,inv.details,inv.format())
 
-
-
-
+})
 
 
 
